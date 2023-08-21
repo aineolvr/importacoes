@@ -527,12 +527,12 @@
 
 
       <div class="mdc-touch-target-wrapper btn-arquivo">
-        <button  class="mdc-button mdc-button--touch btn-arquivo-interno" style="color: white; background-color: black; border: 1px solid black; opacity: 0.8;"  >
+        <button  class="mdc-button mdc-button--touch btn-arquivo-interno" style="color: white; background-color: black; border: 1px solid black; opacity: 0.8;" onclick="chooseFile()"  >
           <span class="mdc-button__ripple"></span>
           <span class="mdc-button__touch"></span>
           <span class="mdc-button__label">Escolher arquivo</span>
         </button>
-        <div class="estilo-input-file"></div>
+        <div class="estilo-input-file" onclick="chooseFile()"></div>
       </div>
      
       <input class="input-file" type="file" id="fileInput" style="display: none;"/>
@@ -562,19 +562,18 @@
 
   
 <script>
-
-const chooseButton = document.querySelector('.btn-arquivo-interno');
-    const fileInput = document.getElementById('fileInput');
-
-    chooseButton.addEventListener('click', () => {
+ function chooseFile() {
+        const fileInput = document.getElementById('fileInput');
         fileInput.click();
-    });
+    }
+
+    const fileInput = document.getElementById('fileInput');
 
     fileInput.addEventListener('change', (event) => {
         const selectedFile = event.target.files[0];
         if (selectedFile) {
             console.log('Arquivo selecionado:', selectedFile.name);
-          
+            
         }
     });
 
