@@ -1757,7 +1757,7 @@ tbody  td{
     border-radius: 10px;
     background-color: #F9EAC0;
     width: 828px;
-    height: 250px;
+    height: 180px;
     display: flex;
     align-items: center; 
   }
@@ -1768,7 +1768,7 @@ tbody  td{
     background-color: #FFC61A;
     width: 30px;
     border-radius: 8px;
-    height: 250px;
+    height: 180px;
   }
 
   
